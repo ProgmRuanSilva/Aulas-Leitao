@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <title> Titulo</title>
+        <link rel="stylesheet" href="Puro.css"> <!-- forma de instanciar um arquivo css-->
+        <style> 
+            h1 { /* essa e a forma de comentar em css */
+                font-size: 20px; /*essa e a forma de manipular os elementos*/
+            }
+
+            .fundoVermelho { /*forma de manipular classes (se aplicam a varios elementos)*/
+                background-color: #ff0000; /*usando o hex de RGB*/
+            }
+
+            #textoPrincipal { /*forma de manipular um id*/
+                font-size: 20px;
+                font-weight: bold;
+                color: #fff;
+                background-color: #444;
+                padding: 10px;
+                margin-bottom: 50px;
+            }
+
+        </style>
+    </head>
+    <body>
+        <h1>CSS</h1>
+        <span id="textoPrincipal">Texto 1</span><br><br><br> <!-- ids sao criados para um escopo global -->
+        <span class="fundoVermelho negrito">Texto 2</span><br><br> <!-- classes sao criadas para um escopo de reutilizacao-->
+        <span class="fundoVermelho">Texto 3</span> <!--vc pode usar uma mesma classe varias vezes-->
+    </body>
+</html> <!-- class e mais ultilizado para styles -->

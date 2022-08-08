@@ -1,0 +1,23 @@
+{
+  "name": "Api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "nodemon",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "1.18.2",
+    "express": "4.16.2",
+    "install": "^0.13.0",
+    "node-schedule": "^2.1.0",
+    "nodenpm": "^0.1.6"
+  },
+  "devDependencies": {
+    "nodemon": "1.14.11"
+  }
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicios</title>
+    <style>
+        #conteudo {
+            padding: 30px 0px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        Exercicios Html
+    </header>
+    <nav>
+        <a href="exercicios/teste.html">00 - Teste</a> |
+        <a href="exercicios/texto1.html">01 - Texto 1</a>
+    </nav>
+    <section id="conteudo"></section>
+    <footer>
+        Curso de Web Moderno
+    </footer>
+    <script>
+        document.querySelectorAll('a').forEach(link => { //associando os links a uma funcao
+            link.onclick = function(e) { //selecionamos a acao
+                e.preventDefault() //esse comando deixa o a acao bloquada
+                const conteudo = document.getElementById('conteudo') //Obtvemos o conteudo
+                fetch(link.href) //fetch e baseado em Promise / pegamos o link via ajax pelo link que obtvemos
+                    .then(resp => resp.text()) //chamamos outra Promise
+                    .then(html => conteudo.innerHTML = html) //Adicionamos o conteudo para o html
+            }
+        })
+    </script>
+</body>
+</html>
