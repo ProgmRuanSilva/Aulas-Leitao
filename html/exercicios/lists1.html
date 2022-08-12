@@ -1,0 +1,60 @@
+<h1>Projeto</h1>
+
+<ul class="tree">
+    <li id="1" onclick="setDisplay1()">backend
+        <ul>
+            <li>
+                app
+                <ul>
+                    <li>produto.js</li>
+                    <li>vendas.js</li>
+                    <li>Usuario.js</li>
+                </ul>
+            </li>
+            <li>
+                config
+                <ul>
+                    <li>Banco.js</li>
+                    <li>rotas.js</li>
+                    <li>servidor.js</li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+</ul>
+
+<ul class="tree">
+    <li id="2" onclick="setDisplay2()">FrontEnd
+        <ul>
+            <li>
+                public
+                <ul>    
+                    <li>1</li>
+                    <li>2</li>
+                    <li>3</li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+</ul>
+
+<link rel="stylesheet" href="http://files.cod3r.com.br/curso-web/tree.css">
+<script>
+    function setDisplay1() {
+        const Display = document.getElementById('2');
+        if(Display.style.display === "none") {
+            Display.style.display = "block"
+        }else {
+            Display.style.display = "none"
+        }
+    }
+    
+    function setDisplay2() {
+        const Display = document.getElementById('1');
+        if(Display.style.display === "none") {
+            Display.style.display = "block"
+        }else {
+            Display.style.display = "none"
+        }
+    }
+</script>
