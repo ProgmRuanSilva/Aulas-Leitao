@@ -1,6 +1,7 @@
 <h1>Formulário</h1>
 
-<form action="http://localhost:3003/usuarios" method="post">
+<form method="post">
+    <input type="hidden" name="id" value="3"> <!--é comun o uso de um input escodido-->
     <input type="text" name="nome"> <!--O uso do name é importante pois será usado no back end-->
     <input type="password" name="senha">
     <textarea name="bio" cols="30" rows="10"></textarea>
@@ -26,7 +27,8 @@
     <option value="php">Php</option>
     <option value="html">Html</option>
     </select>
-<button>Incluir</button>
+<button formaction="http://localhost:3003/usuarios">Incluir</button> <!-- vc tamebem pode usar o metrodo:formmethod-->
+<button formaction="http://localhost:3003/usuarios/3">Alterar</button>
     
 </form>
 
