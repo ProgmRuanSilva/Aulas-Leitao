@@ -1,0 +1,53 @@
+<p>
+    <img src="http://files.cod3r.com.br/curso-web/imagem1.jpg" 
+    alt="Muro da Cidade" 
+    width="513" height="342"
+    title="Muro da Cidade por Tarso Bessa">
+</p> <!-- alt aprarece se ele não encontrar a imagem-->
+
+<p>
+    <img src="http://files.cod3r.com.br/curso-web/imagem2.gif" 
+    alt="Intro Cod3r" height="342">
+</p>
+
+<p class="circular">
+    <img src="http://files.cod3r.com.br/curso-web/imagem3.png" 
+    alt="imagem.png" height="342">
+</p>
+
+<p class="texto">
+    <img src="http://files.cod3r.com.br/curso-web/avatar.jpg" 
+    alt="Avatar" height="50" align="left"> <!-- align é aonde o texto vai aparecer-->
+    Texto de teste pq portugues é dificil de escrever
+</p>
+
+<p class="cidade"></p> <!-- vc tambem pode colocar pelo css-->
+
+<p>
+    <picture> <!-- essa é uma forma de apresentar condicionalmente: como if-->
+        <source srcset="http://files.cod3r.com.br/curso-web/logo-larga.png"
+        media="(min-width:600px)">
+        <img src="http://files.cod3r.com.br/curso-web/logo-estreita.png" alt="Logo">
+    </picture>
+</p> <!-- Lenbre-Se Bem Disso é bem ultil-->
+<style>
+    .circular {
+        width: 513px;
+        background-color: #444;
+    }
+    .texto {
+        width: 400px;
+    }
+    .texto img {
+        margin: 0px 12px 2px 0px;
+    } /* dessa forma vc pode entrar dentro de uma classe em css*/
+    
+    .cidade {
+        width: 513;
+        height: 342;
+        background-image: url('http://files.cod3r.com.br/curso-web/imagem4.jpg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 200%;
+    } /* essa seria a forma de passar uma imagem pelo css, mas, não ta funcionando*/
+</style>
