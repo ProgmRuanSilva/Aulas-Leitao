@@ -1,0 +1,54 @@
+<video id="meuVideo" width="800px" height="450" controls controlslist="nodownload">
+    <source src="http://files.cod3r.com.br/curso-web/video.mp4" type="video/mp4"> <!-- use source pois tem mais suporte-->
+    Se o browser não suportar ele aparecerá aqui.
+</video>
+
+<body>
+    
+    <div class="progress-bar">
+        <div></div>
+    </div>
+
+<div>
+    <button id="playBtn">Play</button>
+</div>
+    
+</body>
+
+<script>
+    //play button 
+    const video = document.getElementById('meuVideo');
+    const btn = document.getElementById('playBtn');
+
+    btn.addEventListener('click', toggle);
+
+    function toggle() {
+        video.paused ? video.play() : video.pause()
+    }
+
+    //progess bar
+    function progressBar() {
+        
+    }
+
+</script>
+
+<style>
+
+    .progress-bar {
+        height: 20px;
+        width: 500px;
+        border: solid 1px #444;
+        margin: 20px;
+    }
+
+    .progress-bar > div {
+        background-color: red;
+        color: #fff;
+        text-align: right;
+        font-size: 14px;
+        content: "";
+        
+    }
+
+</style>
