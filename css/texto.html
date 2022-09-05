@@ -14,7 +14,74 @@
         body {
             display: flex;
             flex-direction: column;
-            align-items: center;
+            align-items: center; /*alinhamento */
+        }
+
+        .botao {
+            font-size: 20px;
+            text-decoration: none;
+            padding: 10px 50px;
+            border-radius: 25px;
+        }
+
+        .destaque {
+            color: #fff;
+            background: tomato;
+            box-shadow: 2px 2px 1px 1px #000;
+        }
+
+        .destaque:active {
+            box-shadow: none;
+        }
+
+        p {
+            /*valores padrão*/
+            font-size: 1em;
+            font-size: 100%;
+            font-size: 16px;
+            font-size: 12pt;
+
+            /*valores absolutos*/
+            font-size: 100px; /*tamanho relativo a telas*/
+            font-size: 72pt; /*pontos*/
+            font-size: 1in; /*polegadas*/
+
+            /*unidades relativas */
+            font-size: 2.2em;
+            font-size: 2.2rem;
+            font-size: 50vh;
+            font-size: 10vw;
+
+            font-family: monospace;
+            font-family: Georgia, serif;
+            font-family: Verdana, sans-serif;
+            font-family: 'indie flower', cursive;
+            
+            font-weight: 900; /*peso da fonte (grossura)*/
+            font-style: italic;
+            text-transform: uppercase;
+            /* text-decoration: overline underline line-through; */
+            word-spacing: 10px; /*espaçamento entre as frases*/
+            letter-spacing: 20px; /*espaçamento entre as letras */
+            line-height: 2.5em; /*altura das letras */
+            text-align: center; /*alinhamento */
+        }
+
+        .botao {
+            font-size: 20px;
+            text-decoration: none;
+            padding: 10px 50px;
+            border-radius: 35px; /*deixa mais redondo*/
+        }
+
+        .destaque {
+            color: #fff;
+            background: tomato;
+            box-shadow: 2px 2px 1px 1px #444;
+        }
+
+        .destaque:active {
+            box-shadow: none;
         }
     </style>
 </head>

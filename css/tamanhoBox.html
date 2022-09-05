@@ -7,6 +7,17 @@
         body {
             font-size: 45px;
         }
+
+        div {
+            background-color: deepskyblue;
+            width: 100%; /*nesse caso o conteúdo estrapola o tamanho*/
+            height: 300px;
+            padding: 100px;
+            border: solid 20px;
+            box-sizing: border-box; /*no caso do content só o conteúdo fica com 100% */
+            /*no caso de border tudo o que é de dentro da borda */
+            /*border-box não se aplica para todos os elementos universais use o (use * como seletor universal)*/
+        }
     </style>
 </head>
 <body>

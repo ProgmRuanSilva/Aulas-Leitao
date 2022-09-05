@@ -5,7 +5,33 @@
     <meta charset="UTF-8">
     <title>Unidades #01</title>
     <style>
-        /* ... */
+        /* são três formas de tamanho ne uma página: 
+        Absolutos: px (vc usa de forma a que não se altera )
+        ViewPort: vh, vw, vMin, vmax (se alteram de forma relativa )
+        Font: rem. em. (altera a fonte com relação ao descrito no projeto)
+        */
+        .unidades-absolutas {
+            position: absolute;
+            font-size: 40px;
+            padding: 20px;
+            border: solid 5px;
+            margin: 30px;
+            width: 4cm; /*cm é pouco usado*/
+            height: 20mm;
+            top: 150px; /*se não fosse usado o absolute seria ignorado o top left*/
+            left: 200px;
+        }
+        .unidades-relativas {
+            position: absolute;
+            font-size: 4em; /*no chrome é de 16px*/
+            padding: 5%;
+            border: solid 1vw #222;
+            margin: .8%;
+            width: 20vw;
+            height: 15vh;
+            bottom: 5%;
+            right: 5%;
+        }
     </style>
 </head>
 

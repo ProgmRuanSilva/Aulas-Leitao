@@ -1,11 +1,22 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-    <meta charset="UTF-8">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
     <title>Herança</title>
     <style>
-        /* ... */
+        body {
+            font-family: 'Oswald', sans-serif; /*aqui embora não aja descrito o h1 ele herda o estilo*/
+            font-size: 40px;
+            border: solid 3px red;
+            padding: 50px;
+        }
+        div {
+            border: inherit; /* inherit é para herdar um atibuto*/
+            padding: inherit;
+        }
     </style>
 </head>
 

@@ -5,24 +5,34 @@
     <meta charset="UTF-8">
     <title>Float</title>
     <style>
-        body {
+        body { /*não muito aconselhado */
             background-color: #222;
         }
 
         .c1 {
             background-color: red;
+            float: right; /*essa flutuação não se aplica a todos os elementos use clear*/
         }
 
         .c2 {
             background-color: green;
+            clear: right;
+            float: left;
         }
         
         .c3 {
             background-color: blue;
+            clear: both;
         }
 
         .c4 {
             background-color: orange;
+            float: right; /*ele não é indicado pq vc sempre tem que limpar as invações dos outros elementos*/
+        }
+
+        div {
+            width: 150px;
+            height: 150px;
         }
     </style>
 </head>

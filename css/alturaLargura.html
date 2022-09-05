@@ -5,9 +5,12 @@
     <meta charset="UTF-8">
     <title>Altura e Largura</title>
     <style>
+        html { height: 100%;} /*por padrão o html usa o tamanho relativo aos elementos*/
+
         body {
             font-size: 40px;
             background-color: coral;
+            height: 100%; /*nesse caso use os elementos tamebem nos elementos paternos */
         }
 
         div {
@@ -16,6 +19,13 @@
 
         span {
             background-color: dodgerblue;
+        }
+
+        span, div {
+            width: 50%; /*o body sempre ocupa a largura total mas não a altura*/
+            height: 250px; /*quando se coloca de forma absoluta o body aumenta */
+            height: 50%; /*nesse caso como está descrito de forma relativa*/
+            display: block; /*nesse caso ele usa o total relativo */
         }
     </style>
 </head>

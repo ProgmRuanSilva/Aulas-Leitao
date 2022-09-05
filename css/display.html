@@ -6,6 +6,26 @@
     <title>Display</title>
     <style>
         /* ... */
+        body {
+            font-size: 40px;
+            color: #fff;
+            background-color: coral;
+        }
+        ul { padding: 0;}
+        div { background-color: seagreen; }
+        span {background-color: dodgerblue;}
+        li {background-color: purple;}
+
+        div, span, li { 
+            width: 50%; /*forma relativa */
+            width: 200px; /*forma relativa*/
+            height: 80px; /*note que o span é o unico que não mexe*/
+            padding-top: 30px;
+            text-align: center;
+            display: inline; /*quando usado o inline vc não tem controle sobre a largura e altura do obj, só sobre o padding*/
+            display: block; /*por padrão se forma um display inline mas com block cada um tem os atributos classificados individualemte*/
+            display: inline-block; /*dessa forma ele considera a altura e largura dentro da linha*/
+        }
     </style>
 </head>
 

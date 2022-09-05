@@ -5,7 +5,28 @@
     <meta charset="UTF-8">
     <title>Box Model</title>
     <style>
-        /* ... */
+       /*o conteudo é situado no nucleo
+       o padding está entre o conteúdo ea margem (pode ter de um lado só)
+       a margin é o que te dá o espaçamento entre componentes visinhos (pode ter de um lado só tambem)
+       o modo do short é: 1top 2right 3lower 4left
+       com dois valores aplicasse 1cimabaixo 3esquerdadireita
+       vc pode aplicar tambem há todos colocando cada no atributo.
+       os atributos são somaticos ou seja o resultado será a soma de todos
+        */
+        body { font-size: 80px; margin: 0px; }
+        .c1 { background-color: orange;}
+        .c2 { background-color: skyblue;}
+        .c3 { background-color: tomato;}
+
+        div {
+            float: left;
+            padding-top: 100px;
+            padding: 10px 50px 100px 150px;
+            padding: 100px 50px;
+            padding: 50px;
+            margin: 0px 20px;
+            border: solid 15px black;
+        }
     </style>
 </head>
 

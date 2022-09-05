@@ -5,7 +5,26 @@
     <meta charset="UTF-8">
     <title>Especificidade CSS</title>
     <style>
-        /* https://developer.mozilla.org/pt-BR/docs/Web/CSS/Specificity */
+        /* https://developer.mozilla.org/pt-BR/docs/Web/CSS/Specificity
+        1 - evite ao máximo usar o !important
+        2 - em caso de empate ele sempre escolherá a ultima renderização 
+        3 - seletores mais especificos tem prioridade */
+
+        p {
+            background-color: #aaa;
+        }
+
+        .observacao {
+            background-color: #5f5;
+            padding: 20px;
+            border: dashed 5px;
+            font-size: 40px;
+        }
+
+        p.observacao {
+            padding: 5px; /*esse ganha pois é mais especifico*/
+            background: linear-gradient(to right, red, orange);
+        }
     </style>
 </head>
 

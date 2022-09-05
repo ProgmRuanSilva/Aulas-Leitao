@@ -3,13 +3,18 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Origem CSS: Externo, Interno e Inline</title>
+    <title>Origem CSS: Externo, Interno e Inline</title> <!-- a prioridade é dada pelo ultimo uso no script-->
     <style>
-        /* ... */
+        body {
+            background-color: aquamarine;
+        }
     </style>
+    <link rel="stylesheet" href="css/externo.css">
+    <!-- o uso do ref= stylesheet é primordial para o uso esxterno de css-->
 </head>
 
-<body>
+<body style="background-color: coral;">
+    <!-- nesse caso declaração in line tem a prioridade total -->
     <h1>E agora?</h1>
 </body>
 

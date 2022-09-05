@@ -5,6 +5,25 @@
     <title>Unidades #02</title>
     <style>
         /* ... */
+
+        .fora {
+            position: relative;
+            background-color: orange; /*a altura da div muda com o conteudo */
+            height: 400px;
+            width: 400px;
+            padding: 50px;
+        }
+
+        .dentro {
+            background-color: mediumvioletred;
+            height: 100px;
+            width: 100%;
+            position: static; /*ele ocupa somente o espaço do conteúdo */
+            position: relative;
+            position: absolute; /*conteúdo + padding */
+            position: fixed; /*considera o tamanho do viewPort*/
+            
+        }
     </style>
 </head>
 <body>
