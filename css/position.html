@@ -5,7 +5,70 @@
     <meta charset="UTF-8">
     <title>Position</title>
     <style>
-        /* ... */
+        /*São 4 tipos de posições: 
+        static: padrão
+        fixed: deixa o obj fixado com a rolagem da página.
+        relative: sempre se baseia no obj anterior.  
+        absolute: leva em consideração o obj anterior e sobrepõe os outros. (ele se posiciona com relação a pagina se não estiver herdado)
+        sticky:   */
+
+        div {
+            font-size: 60px;
+            padding: 30px;
+            border: solid 5px #222;
+        } /* por padrão static herda as caracteristicas*/
+
+        .static {
+            top: 100px;
+            left: 100px;
+            background-color: steelblue;
+        } /*em static não se considera as posições */
+
+        .fixed {
+            position: fixed;
+            bottom: 30px;
+            right: 0px;
+            background-color: tomato;
+        }
+
+        .relative1 {
+            position: relative;
+            left: 50px;
+            top: 5px;
+            background-color: seagreen;
+        }
+
+        .absolute1 {
+            position: absolute;
+            left: 350px;
+            top: 120px;
+            background-color: violet;
+        }
+
+       .relative2 {
+            position: relative;
+            left: 250px;
+            top: 2000px;
+            width: 200px;
+            height: 200px;
+            background-color: slategray;
+       }
+       
+       .absolute2 {
+            position: absolute;
+            left: 10px;
+            top: 10px;
+            width: 20px;
+            height: 20px;
+            background-color: orange;
+       } /*note que ele leva em consideração o elemento anterior*/
+
+       .sticky {
+            position: -webkit-sticky;
+            position: sticky;
+            background-color: #777;
+            top: 0px;
+       } /*se posiciona com relação ao top da pagina*/
     </style>
 </head>
 
