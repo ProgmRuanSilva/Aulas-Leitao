@@ -6,8 +6,53 @@
     <title>Flexbox #02</title>
     <link rel="stylesheet" href="css/tag.css">
     <style>
-        /* ... */
-    </style>
+        .div {
+            border: solid 5px dodgerblue;
+            font-size: 40px;
+        }
+
+        .flex-container div {
+            box-sizing: border-box;
+        }
+
+        .flex-container {
+            display: flex;
+            height: 300px;
+            width: 600px;
+        }
+
+        /*vamos diferenciar o uso da ordem*/
+        .flex-container div:nth-child(3) {
+            background-color: indianred;
+            order: 1; /*de forma padrão todos os elementos tem peso 0 adicionando ele fica por ultimo*/
+            order: -1; /*adicionando um numero negativo ele fica com menos peso por tanto em primeiro*/
+            align-self: center; /*coloca em centro*/
+            align-self: flex-start;
+            align-self: flex-end;
+            align-self: stretch; /*padrão do html*/
+        }
+
+        /*modo como se ocupa o espaço */
+        .flex-container div {
+            width: 100px;
+            flex-grow: 0;
+            flex-grow: 1; /*todos ocupam de forma igual o espaço*/
+        }
+
+        .flex-container div:nth-child(1) {
+            flex-grow: 2; /*crese mais que os outros pois o peso é maior*/
+        }
+
+        .flex-container {
+            width: 300px;
+            flex-shrink: 1; /*encolhe todos de forma igual */
+        }
+
+        .flex-container div:nth-child(1) {
+            flex-shrink: 5; /*encolhe mesma logica do grow*/
+        }
+
+     </style>
 </head>
 
 <body>

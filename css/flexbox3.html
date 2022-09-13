@@ -7,6 +7,30 @@
     <link rel="stylesheet" href="css/tag.css">
     <style>
         /* ... */
+        .div {
+            border: solid 5px dodgerblue;
+            font-size: 40px;
+        }
+
+        .flex-container div {
+            box-sizing: border-box;
+        }
+
+        .flex-container {
+            display: flex;
+        }
+
+        .flex-container div {
+            flex-basis: 100px; /*está é a forma ideal de se dizer qual a largura de um determinado obj dentro do flex */
+            /*flex basis se comporta de acordo com a orientação main axis descrita por exemplo column*/
+            width: 200px; /*flax basis é mais forte em row */
+        }
+
+        .flex-container div:nth-child(4) {
+            /*grow shrink bases*/
+            flex: 3 6 10px;
+
+        }
     </style>
 </head>
 

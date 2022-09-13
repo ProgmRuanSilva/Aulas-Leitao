@@ -7,20 +7,109 @@
     <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <style>
-        /* ... */
+        
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box; 
+            font-family: 'Oswald', sans-serif;
+            font-size: 20px;
+        }
+        
+        .cabecalho {
+            display: flex;
+            background-color: black;
+            justify-content: flex-start;
+            align-items: center;
+            border-bottom: solid 5px tomato ;
+        }
+        
+        .menu-toggle {
+            display: none;
+        }
+        
+        .logo img {
+            display: block;
+            width: 320px;
+            margin-right: 10px;
+            margin-left: 5px;
+        }
+        
+        .menu li {
+            display: inline-block;
+            position: relative;
+            list-style: none;
+        }
+        
+        a {
+            text-decoration: none;
+            color: white;
+            margin: 5px;
+        }
+
+        .menu a {
+            position: relative;
+            float: center;
+            padding: 25px 15px 25px 15px;
+            margin: 5px;
+            transition: all 0.3s ease 0s;
+        }
+
+        .menu a:hover {
+            background-color: tomato;
+        }
+
+        .botao-destaque {
+            padding: 10px 20px 10px 20px;
+            background: tomato;
+            border-radius: 25px;
+        }
+
+        .autenticacao {
+            margin-left: auto;
+        }
+
+        .menu-toggle {
+            background-color: black;
+            position: relative;
+            margin-left: 30vw;
+            transition: all 0.3s ease 0s;
+        }
+
+        .menu-toggle i {
+            color: #fff;
+        }
+        
+
+        /*response*/
+
+        @media (max-width: 880px) {
+            .menu-toggle {
+                transition: all 0.5s ease 0s;
+                display: block;}
+            .menu {
+                transition: all 0.5s ease 0s;
+                display: none;}
+            .autenticacao {
+                transition: all 0.5s ease 0s;
+                display: none;}
+        }
     </style>
 </head>
 
 <body>
     <header class="cabecalho">
+
         <div class="logo">
             <a href="#inicio">
                 <img src="http://files.cod3r.com.br/curso-web/logo.png" alt="Logo" />
             </a>
         </div>
+
         <button class="menu-toggle">
             <i class="fa fa-lg fa-bars"></i>
         </button>
+
         <nav class="menu">
             <ul>
                 <li>
@@ -37,14 +126,24 @@
                 </li>
             </ul>
         </nav>
+        
         <aside class="autenticacao">
             <a href="#login">Login</a>
-            <a href="#registar" class="botao destaque">Registrar</a>
+            <a href="#registar" class="botao-destaque">Registrar</a>
         </aside>
+
     </header>
 
     <script>
-        // ...
+    window.onhashchange = function(e) {
+        const oldurl = e.oldurl.split('#')[1]
+        const newurl = e.newurl.split('#')[1]
+        const oldMenu = document.querySelector(`.menu a[href='#${oldurl}']`)
+        const newMenu = document.querySelector(`.menu a[href='#${newurl}']`)
+        oldMenu && oldMenu.classList.remove('selected')
+        newMenu && newMenu.classList.add('selected')
+    }
+    
     </script>
 </body>
 

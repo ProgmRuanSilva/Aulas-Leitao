@@ -20,6 +20,28 @@
             border: solid 5px dodgerblue;
             background: #fff;
         }
+
+        body {
+            display: grid;
+            grid-template-columns:[inicial] 1fr
+            [metade-1 meio-1]1fr
+            [metade-2 meio-2] 1fr
+            [fim]; /*vc pode dar nomes para as colunas*/
+            grid-template-rows: repeat(3, 1fr); /*está criado mas não usando*/
+            column-gap: 20px; /*espaçamento dentre as colunas*/
+            row-gap: 20px; /*espaçamento entre as linhas*/
+            gap: 50px 10px; /*linhas colunas */
+            gap: 10px; /*aplica o mesmo em todos os paramentros*/
+        }
+
+        .d1 {
+            grid-column-start: metade-2;
+            grid-column-end: fim;
+            grid-column: meio-1 / fim; /*vc pode tambem especificar os dois ao mesmo tempo*/
+            grid-row: 1 / span 2; 
+            grid-area: 1 / meio-1 / span 3 / fim; /*row start, column start row end column end essa ordem */
+        }
+
     </style>
 </head>
 
