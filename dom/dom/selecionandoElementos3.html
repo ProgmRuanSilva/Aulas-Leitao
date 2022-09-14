@@ -31,7 +31,20 @@
         <button>Pesquisar</button>
     </form>
     <script>
-        // ...
+        //esse formulário trabalha com uma pesquisa no google
+        //name sempre deve estar em um formulário
+        //preste atenção como os formulários são mostrados são diferentes tipos
+
+        console.log(document.forms) //html collection
+        console.log(document.forms[0]) //form em html puro (mostra no browser)
+        console.log(document.getElementsByName('pesquisa')) //mostra uma nodelist
+        console.log(document.getElementsByTagName('form')) //html collection
+        console.log(document.pesquisa) //form puro. mais indicado
+        console.log(document.pesquisa.q) //procura de forma mais especifica tambem
+        document.pesquisa.q.value = 'Linux'; //vc pode mexer no imput desse jeito
+        document.pesquisa.hl.value = 'en-us'// note que essas palavras são pre determinadas pelo formulário.
+        
+
     </script>
 </body>
 

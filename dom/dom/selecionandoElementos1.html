@@ -10,7 +10,25 @@
     <div>Segundo</div>
     <div class="terceiro ultimo">.terceiro .ultimo</div>
     <script>              
-        // ...
+       //Dom é a manipulação do html 
+        document.getElementById('primeiro').classList.add('destaque')
+// ele pega o elemento na pagina e adiciona uma classe css.
+
+        const divs = document.getElementsByTagName('div')
+        //pega note que ele está pegando todos os elementos
+        Array.from(divs).forEach(e => e.classList.remove('destaque'))
+        //manipulação de classes é melhor feita com Array.
+
+        const divsArray = [...divs]
+        divsArray.forEach(e => e.classList.add('destaque'))
+        //para cada elemento que estiver em divs ele consederá um destaque
+
+        const ultimosElemtos = document.getElementsByClassName('ultimo')
+        for (let e of ultimosElemtos) {
+            e.classList.remove('destaque')            
+        }
+
+
     </script>
 </body>
 </html>

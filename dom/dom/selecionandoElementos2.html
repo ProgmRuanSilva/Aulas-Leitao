@@ -10,7 +10,37 @@
     <div>Segundo</div>
     <div class="terceiro ultimo"><span wb-attrib>.terceiro .ultimo</span></div>
     <script>              
-        // ...
+        //queryselector é bem abrangente
+        document.querySelector('#primeiro').classList.add('destaque')
+
+        const selecionar = seletor => 
+            document.querySelectorAll(seletor).forEach(e => e.classList.add('destaque'))
+        //queryselector não retorna um html Colection como é o caso do getElementByClassName
+        //o que isso quer dizer é que não há map, reduce ...
+
+        const deselecionar = seletor => 
+            document.querySelectorAll(seletor).forEach(e => e.classList.remove('destaque'))
+
+        selecionar('div') //aplica a finção que criamos em todos as classes div
+        deselecionar('*') //aplica ao escopo global a função.
+
+        selecionar('.terceiro.ultimo')//em caso de aplicar somente a um atributo seja especifico.
+        //lembrando que a ordem não importa
+
+        deselecionar('*')
+        selecionar(':not(#primeiro)') //todos que não são o primeiro seram selecionados
+
+        deselecionar('*')
+        selecionar(':nth-child(1)') //selecionando o primeiro elemento de uma classe filho
+
+        deselecionar('*')
+        selecionar('div:nth-of-type(1)') //selecionando o primeiro elemento da classe div
+
+        deselecionar('*')
+        selecionar('[wb-attrib]') //selecionando apenas o atributo
+
+        deselecionar('*')
+
     </script>
 </body>
 </html>

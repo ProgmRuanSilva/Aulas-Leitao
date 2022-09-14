@@ -22,7 +22,39 @@
         <p>Fim</p>
     </div>
     <script>
-        // ...
+        //estamos usando o Node como descrito na aula passada
+        //mas como um formulário pode varia é melhor usarmos das facilidades do js
+
+        //adicionando o console.log a uma função atravez de prototype
+        function log () {
+            console.log(this)
+        }
+        //colocando log dentro dessas funções 
+        HTMLAllCollection.prototype.log = log
+        HTMLElement.prototype.log = log
+        NodeList.prototype.log = log 
+        Node.prototype.log = log
+
+        const lista = document.querySelector('div ul') //corpo da pagina
+        lista.parentNode.log()
+        lista.childNodes.log() //childNotes leva em consideração os espaços.
+        
+        const primeiro = lista.firstChild
+        primeiro.log()
+        primeiro.nextSibling.log() //elemento posterior de primeiro
+        
+        const ultimo = lista.lastChild
+        ultimo.log()
+        ultimo.previousSibling.log() //elemento anterior
+
+        lista.children.log() //retorna um HTML colection
+        lista.firstElementChild.log() //ele traz o primeiro elemento do html
+        lista.lastElementChild.log()
+        lista.parentNode.previousElementSibling.log()
+        // lista: ul parentNode: div previosElementSibling: elemento anterior
+        lista.parentNode.nextElementSibling.log() //elemento posterior
+
+
     </script>
 </body>
 
