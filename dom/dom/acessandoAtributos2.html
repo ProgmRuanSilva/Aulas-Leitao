@@ -17,7 +17,25 @@
         </ul>
     </div>
     <script>
-        // ...
+        
+        const lista = document.querySelector('div ul[destino="escritório"]') //se pegasse o id:#classes seria bem melhor
+        console.log('childNodes', lista.childNodes)
+        console.log('destino', lista.id) //use id pelo browser conhecer
+        console.log('getAttribute', lista.getAttribute('destino'))
+        console.log('hasAttribute', lista.hasAttribute('destino'))
+        lista.setAttribute('destino', 'empresa')
+        lista.setAttribute('status', 'aberto') //set serve não só pra mudar mas tambem para adicionar.
+        lista.removeAttribute('destino')
+        console.log(lista.dataset) //os atributos com formato data- são tratados de forma diferente pelo browser
+        lista.dataset.urgencia = 4
+        console.log(lista.getAttribute('data-urgencia'))
+
+        //cuidados
+        const label = document.querySelector('label')
+        console.log(label.for) //não funciona pois é uma palavra reservada
+        console.log(label.htmlFor) //tem que usar desse jeito
+        console.log(label.getAttribute('for')) //dessa forma funciona tambem
+
     </script>
 </body>
 

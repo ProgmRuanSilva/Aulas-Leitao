@@ -15,7 +15,32 @@
         <img src='http://files.cod3r.com.br/curso-web/logo-estreita.png' alt='logo'>
     </div>
     <script>
-        // ...
+        //vamos analizar formas de pegar o mesmo atributo.
+        const img = document.querySelector('img')
+        console.log('getAtribute', img.getAttribute('src')) //com o nome
+        console.log('src', img.src)//escrevendo diretamente
+        console.log('["src"]', img['src']) //atravez de colchetes
+        console.log('alt', img.alt) //alt da mesma forma como src
+
+        //Existem tambem elementos comuns entre todas as tags vejamos:
+
+        console.log('Elemento "img"......')
+        console.log('NodeType', img.nodeType) //1: elemento, pesquise sobre
+        console.log('NodeName', img.nodeName) //Img
+
+
+        const src = img.getAttributeNode('src')// me dá um nó do atributo
+        console.log('Atributo "src".......')
+        console.log('NodeType', src.nodeType)
+        console.log('NodeName', src.nodeName)
+        console.log('NodeValue', src.nodeValue)
+
+        const link = document.querySelector('a')
+        console.log('Elemento "a"......')
+        console.log('href', link.href)
+        console.log('fristChild.nodeType', link.firstChild.nodeType)
+        link.firstChild.nodeValue = 'Novo Texto' //lembrando que não são muito usados
+
     </script>
 </body>
 
