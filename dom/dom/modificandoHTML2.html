@@ -12,7 +12,20 @@
         <p>Texto Inicial</p>
     </div>
     <script>
-        // ...
+        // Alguns outros html
+
+        const div = document.querySelector('div')
+        div.innerHTML = 'Texto Alterado' //cuidado tem um buraco de segurança com isso
+        // div.outerHTML = 'Texto Salvo' //modifica não só o conteúdo mas todo o conjunto
+        div.insertAdjacentHTML('beforebegin', '<p>Antes inicio</p>')//adicionado antes
+        div.insertAdjacentHTML('afterbegin', '<p>Inicio</p>')//adicionado dentro
+        div.insertAdjacentHTML('beforeend', '<p>Depois </p>')
+        div.insertAdjacentHTML('afterend', '<p>Fim </p>')
+
+        //somente texto 
+        console.log(div.innerHTML)
+        console.log(div.innerText)
+
     </script>
 </body>
 
