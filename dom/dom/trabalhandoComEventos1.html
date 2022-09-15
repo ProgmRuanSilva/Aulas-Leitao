@@ -9,9 +9,28 @@
 
 <body class="conteudo exercicio">
     <div>
-        <a href="https://google.com.br">Google</a>
+        <!-- onclick="navegarEm5s(event)" hard coded: escrito a mão -->
+        <a espera href="https://google.com.br" >Google</a>
     </div>
     <script>
-        // ...
+        //Vamos trabalhar com eventos:
+
+        //função de manipular o evento onClick
+        function navegarEm5s(e) { //sempre chamar event no onClick html
+            e.preventDefault() //necessario parar o comportameto padrão
+            setTimeout(() => {
+                const link = e.target
+                window.location.href = link.href //altera o endereço pro original
+            }, 5000)
+        } 
+
+        //forma mais dinamica de mexer softcoded: deixa mais livre (mas não muito claro)
+        const a = document.querySelector('a')
+        a.onclick = navegarEm5s
+
+        //é uma boa pratica usarmos atributos quando js pois o html não renderiza é possivel tambem atribuir atributos
+        const b = document.querySelector('[espera]')
+        b.onclick = navegarEm5s
+
     </script>
 </body>
