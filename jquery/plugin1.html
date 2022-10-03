@@ -22,6 +22,26 @@
     </div>
 
     <script>
-        // ...
+        
+        //vamos usar evol para interpretar o texto
+        (function($) {
+            $.fn.interpretar = function () {
+                const retiraChaves = s => s.substring(2, s.length - 2)
+                const conteudo = $(this).html()
+                const expresChaves = conteudo.match(/\{\{.+\}\}/g)
+                const espressoes = expresChaves.map(retiraChaves)
+                const resultados = espressoes.map(e => eval(e))
+
+                let conteudoFinal = conteudo
+                for(let i = 0; i < expresChaves.length; i++)
+                conteudoFinal = conteudoFinal.replace(
+                    expresChaves[i], resultados[i]
+                )
+                $(this).html(conteudoFinal)
+            }
+        })(jQuery)
+
+        $('div').interpretar()
+        
     </script>
 </body>
