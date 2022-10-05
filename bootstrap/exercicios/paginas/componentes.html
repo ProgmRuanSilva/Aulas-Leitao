@@ -24,29 +24,29 @@
 
 <!-- Botões -->
 
-    <div>
-        <div class="mb-3">
-            <button class="btn-primary">salvar</button>
-            <button class="btn-secondary">Cancelar</button>
-            <button class="btn-outline-success">Finalizar</button>
-            <button class="btn btn-danger" disabled="disabled">Excluir</button>
-            <button class="btn btn-warning" data-toggle="button">Selecione</button>
-        </div>
-        <div class="btn-grup mb-3">
-            <button class="btn btn-info">Esquerda</button>
-            <button class="btn btn-info active">Centro</button>
-            <button class="btn btn-info">Direita</button>
-        </div>
-        <div class="dropdown">
-             <button class="btn btn-danger btn-lg dropdown-toggle" data-toggle="dropdown">
-                Comprar!
-             </button>
-             <div class="dropdown-menu">
-                <a href="#" class="dropdown-item">Paypal</a>
-                <a href="#" class="dropdown-item">Pagseguro</a>
-             </div>
+<div>
+    <div class="mb-3">
+        <button class="btn-primary">salvar</button>
+        <button class="btn-secondary">Cancelar</button>
+        <button class="btn-outline-success">Finalizar</button>
+        <button class="btn btn-danger" disabled="disabled">Excluir</button>
+        <button class="btn btn-warning" data-toggle="button">Selecione</button>
+    </div>
+    <div class="btn-grup mb-3">
+        <button class="btn btn-info">Esquerda</button>
+        <button class="btn btn-info active">Centro</button>
+        <button class="btn btn-info">Direita</button>
+    </div>
+    <div class="dropdown">
+        <button class="btn btn-danger btn-lg dropdown-toggle" data-toggle="dropdown">
+            Comprar!
+        </button>
+        <div class="dropdown-menu">
+            <a href="#" class="dropdown-item">Paypal</a>
+            <a href="#" class="dropdown-item">Pagseguro</a>
         </div>
     </div>
+</div>
 
 <h1 class="mt-5">2. Progresso -
     <small>
@@ -74,7 +74,7 @@
         <div class="progress-bar bg-danger" style="width: 30%;"></div>
         <div class="progress-bar bg-warning" style="width: 20%;"></div>
         <div class="progress-bar bg-info" style="width: 25%;"></div>
-    </div> 
+    </div>
 </div>
 
 <h1 class="mt-5">3. Mensagens (Alertas) -
@@ -86,26 +86,26 @@
 
 <!-- Alertas -->
 
-    <div>
-        <div class="alert alert-success">
-            Operação realizada com Sucesso
-        </div>
+<div>
+    <div class="alert alert-success">
+        Operação realizada com Sucesso
     </div>
-    <div>
-        <div class="alert alert-warning">
-            <strong> Cuidado!</strong> Operação gerou um erro!
-        </div>
-        <div class="alert alert-danger">
-            <strong>Erro!</strong> Ocorreu um erro inesperado!
-            <a href="#" class="alert-link">Mais Detalhes</a>
-        </div>
-        <div class="alert alert-success">
-            <h4 class="alert-heading">Parabéns!</h4>
-            <p>Processo realizado com Sucesso</p>
-            <hr>
-            <p class="mb-0">Não fique orgulhoso</p>
-        </div>
+</div>
+<div>
+    <div class="alert alert-warning">
+        <strong> Cuidado!</strong> Operação gerou um erro!
     </div>
+    <div class="alert alert-danger">
+        <strong>Erro!</strong> Ocorreu um erro inesperado!
+        <a href="#" class="alert-link">Mais Detalhes</a>
+    </div>
+    <div class="alert alert-success">
+        <h4 class="alert-heading">Parabéns!</h4>
+        <p>Processo realizado com Sucesso</p>
+        <hr>
+        <p class="mb-0">Não fique orgulhoso</p>
+    </div>
+</div>
 
 <h1 class="mt-5">4. Paginação -
     <small>
@@ -145,6 +145,15 @@
 <hr>
 
 <!-- Tooltip -->
+<!--need js-->
+<div>
+    <div class="alert alert-warning">
+        Necessario usar Javascript
+        <strong>E agora?</strong>
+    </div>
+
+    <button class="btn btn-danger" data-toggle="tooltip" data-placement="top" title="Pense antes!">Excluir</button>
+</div>
 
 <h1 class="mt-5">6. Slider -
     <small>
@@ -154,6 +163,27 @@
 <hr>
 
 <!-- Slider -->
+<div>
+    <div class="carousel slide" id="slider" data-ride="carousel">
+        <div class="carousel-inner bg-dark">
+            <div class="carousel-item active">
+                <img src="/imgs/slide1.png" alt="imagem 1" class="d-block mx-auto">
+            </div>
+            <div class="carousel-item">
+                <img src="/imgs/slide2.png" alt="imagem 1" class="d-block mx-auto">
+            </div>
+            <div class="carousel-item">
+                <img src="/imgs/slide3.png" alt="imagem 1" class="d-block mx-auto">
+            </div>
+        </div>
+        <a href="#slider" class="carousel-control-prev" data-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </a>
+        <a href="#slider" class="carousel-control-next" data-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </a>
+    </div>
+</div>
 
 <h1 class="mt-5">7. Accordion -
     <small>
@@ -163,7 +193,25 @@
 <hr>
 
 <!-- Accordion -->
-
+<div>
+    <div class="mb-5" id="acordeon">
+        <div class="card">
+            <div class="card-header" id="pergunta1">
+                <h5 class="mb-0">
+                    <button class="btn btn-link" data-toogle="collapse" data-target="#resposta1">
+                        Quem é o Prof?
+                    </button>
+                </h5>
+            </div>
+            <div class="collapse" id="resposta1" data-parent="#acordion">
+                <div class="card-body">
+                    Posso dizer?
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 <script>
-    // ...
+    //tooltip
+    $('[data-toogle="tooltip"]').tooltip()
 </script>
