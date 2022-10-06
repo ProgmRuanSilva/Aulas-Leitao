@@ -20,6 +20,63 @@
 </p>
 
 <!-- Formulário -->
-<div>
-    
+<div class="card">
+    <div class="card-header">
+        <h5 class="mb-0">
+            Exemplo de Formulário
+        </h5>
+    </div>
+    <div class="card-body">
+        <form action="" class="container-fluid">
+            <div class="form-row">
+                <div class="col-12">
+                    <div class="form-grup">
+                        <label for="nome">Nome</label>
+                        <input class="form-control" id="nome"
+                         placeholder="informe o nome"></input>
+                    </div>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="col-12 col-md-6">
+                    <div class="form-grup">
+                        <label for="email">Email</label>
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">@</span>
+                            </div>
+                            <input type="email" class="form-control"
+                            id="email" placeholder="Informe seu Email">
+                        </div>
+                        <small class="form-text text-danger">
+                            Enviaremos um Email
+                        </small>
+                    </div>
+                </div>
+                
+                <div class="col-12 col-md-6">
+                    <div class="form-group">
+                        <label for="LinguagemPreferida">Linguagens</label>
+                        <select name="" id="LinguagemPreferida" class="form-control">
+                            <option value="">Selecione</option>
+                            <option>Js</option>
+                            <option>Java</option>
+                            <option>Phyton</option>
+                            <option>Ruby</option>
+                            <option>Outra</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="form-row mb-0">
+                <div class="col-12 d-flex justify-content-end">
+                    <button class="btn btn-primary mr-1" type="submit">Salvar</button>
+                    <button class="btn btn-secondary" type="reset">Cancelar</button>
+                </div>
+            </div>
+        </form>
+    </div>
 </div>
