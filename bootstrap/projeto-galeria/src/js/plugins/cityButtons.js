@@ -1,5 +1,7 @@
 import $ from 'jquery'
 
+import { loadSuccessCallBack } from '../core/includes'
+
 const duration = 400
 //fiter 
 function filterbyCity(city) {
@@ -43,5 +45,9 @@ $.fn.cityButtons = function () {
     this.html(btnGrup)
     return this
 }
+
+loadSuccessCallBack(function(){
+    $('[wm-city-buttons]').cityButtons()
+})
 
 $('[wm-city-buttons]').cityButtons
