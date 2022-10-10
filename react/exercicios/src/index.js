@@ -1,8 +1,13 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 
-import BomDia from './components/BomDia'
+import Multi, { BoaNoite } from './components/Multiplos'
 
 //ele transpila em jsx 
-ReactDOM.render(<BomDia nome="Guilherme" idade={10}/>, document.getElementById('root'))
+ReactDOM.render(
+    <div>
+        <Multi.BoaTarde nome="Bia"/>
+        <BoaNoite nome="Ana"/>
+    </div>
+    , document.getElementById('root'))
 //os componetes criados por vc devem começar com letra maiuscula
