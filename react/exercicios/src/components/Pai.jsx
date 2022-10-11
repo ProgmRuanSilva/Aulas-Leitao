@@ -1,15 +1,13 @@
 import React from "react";
-
+import { childrenProps } from "../ultils/ultils";
 
 export default props =>
     <div>
         <h1>{props.nome} {props.sobrenome}</h1>
         <h2>Filhos</h2>
         <ul>
-            {React.Children.map(props.children, child => {
-                {React.cloneElement(props.children, {...props.children.props})} 
-            })}
-        </ul>
+            {childrenProps(props)}
+        </ul>   
     </div>
         {/* {props.children} se for função use this */}
         
