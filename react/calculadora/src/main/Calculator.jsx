@@ -20,7 +20,24 @@ export default class Calculator extends Component {
     }
 
     setOperation(operation) {
+        if(this.state.current === 0) {
+            this.setState({ operation, current: 1, clearDisplay: true })
+        } else {
+            const equals = operation === '='
+            const currentOperation = this.state.operation
 
+            const values = [...values]
+            values[0] = eval(`${values[0]} ${currentOperation} ${values[1]}`)
+            values[1] = 0
+
+            this.setState({
+                displayValue: values[0],
+                operation: equals ? null : operation,
+                current: equals ? 0 : 1,
+                clearDisplay: equals,
+                values
+            })
+        }
     }
 
     addDigit(n) {
@@ -51,7 +68,7 @@ export default class Calculator extends Component {
             <div className="calculator">
                 <Display value={this.state.displayValue} />
                 <Button label="AC" click={() => this.clearMemory()} triple />
-                <Button label="/" click={setOperation} />
+                <Button label="/" click={setOperation} operation />
                 <Button label="7" click={addDigit} />
                 <Button label="8" click={addDigit} />
                 <Button label="9" click={addDigit} />
