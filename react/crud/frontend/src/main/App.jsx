@@ -5,8 +5,8 @@ import 'font-awesome/css/font-awesome.min.css'
 
 import Logo from '../components/templates/Logo'
 import Nav from '../components/templates/Nav'
-import Home from "../components/home/Home";
 import Footer from "../components/templates/Footer"
+import Routes from "./Routes";
 import { BrowserRouter } from 'react-router-dom'
 
 export default props =>
@@ -14,7 +14,7 @@ export default props =>
         <div className="app">
             <Logo />
             <Nav />
-            <Home />
+            <Routes />
             <Footer />
         </div>
     </ BrowserRouter>
