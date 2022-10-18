@@ -27,10 +27,10 @@ export default class UserCrud extends Component {
         const user = this.state.user
         const method = user.id ? 'put' : 'post'
         const url = user.id ? `${baseUrl}/${user.id}` : baseUrl
-        axios[method](url, user) 
+        axios[method](url, user)
             .then(resp => {
-                 const list = this.getUpdatedList(resp.data)
-                 this.setState({user: intialState.user, list})
+                const list = this.getUpdatedList(resp.data)
+                this.setState({ user: intialState.user, list })
             })
     }
 
@@ -40,11 +40,16 @@ export default class UserCrud extends Component {
         return list
     }
 
+    updateField(event) {
+        const user = { ...this.state.user }
+        user(event.target.name)
+    }
+
     render() {
         return (
             <Main {...headerProps}>
-                Usuário
+                {this.renderForm()}
             </Main>
-            )
-        }
+        )
     }
+}
