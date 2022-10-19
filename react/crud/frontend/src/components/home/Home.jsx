@@ -6,5 +6,5 @@ export default props =>
         subtitle="Segundo Projeto do Capitulo de React.">
         <div className="display-4">Bem Vindo!</div>
         <hr />
-        <p className="mb-0">Sistema de Exemplo </p>
+        <p className="mb-0">Sistema de Exemplo</p>
     </Main>
