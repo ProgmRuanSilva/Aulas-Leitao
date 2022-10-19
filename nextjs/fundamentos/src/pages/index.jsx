@@ -1,6 +1,7 @@
 //feito em convenções
 //rotas em pages automaticas
 //dentro de pages em minusculo
+//severside redenring
 export default function Inicio() {
     return (
         <div>
