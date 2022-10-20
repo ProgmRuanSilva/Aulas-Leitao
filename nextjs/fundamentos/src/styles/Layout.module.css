@@ -7,5 +7,17 @@
 .cabecalho {
     display: flex;
     justify-content: flex-end;
-    padding: 10px 20px;   
+    padding: 10px 20px;
+    background-color: #777;   
+}
+
+.cabecalho a {
+    background-color: red;
+    padding: 5px 12px;
+    border-radius: 5px;
+}
+
+.conteudo {
+    padding: 25px;
+    height: 100%;
 }
