@@ -8,7 +8,7 @@ export default function Inicio() {
     return (
         <div>
             <Link href="/estiloso">
-                estiloso
+                Estiloso
             </Link>
         </div>
     )
