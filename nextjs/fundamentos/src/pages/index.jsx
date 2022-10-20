@@ -2,11 +2,14 @@
 //rotas em pages automaticas
 //dentro de pages em minusculo
 //severside redenring
+import Link from "next/link"
+
 export default function Inicio() {
     return (
         <div>
-            <h1>Fundamentos de NextJs</h1>
-            <h2>Vamos Estudar esse Framework</h2>
+            <Link href="/estiloso">
+                Estiloso
+            </Link>
         </div>
     )
 }
