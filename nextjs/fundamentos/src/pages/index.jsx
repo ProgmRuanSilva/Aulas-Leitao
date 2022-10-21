@@ -18,7 +18,9 @@ export default function Inicio() {
             <Navegador texto="Exemplo" destino="/exemplo" cor="#9400d3"/>
             <Navegador texto="Jsx" destino="/jsx" cor="crimson"/>
             <Navegador texto="Navegação 1" destino="/jsx" cor="green"/>
+            <Navegador texto="Navegação 2" destino="/cliente/sp/321" cor="blue"/>
         </div>
     )
 }
 //vc pode colocar pastas tambem listadas no projeto atravez do /
+//navegação dinamica entre paginas é feita atravez dos [nome do arq]
