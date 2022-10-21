@@ -19,4 +19,5 @@ export default function Estado() {
     )
 }
 //essa é a forma dinamica de se manupular dentro de react
-//propiedades são somente leituras
+//propiedades são somente
+//usando descusturing é mais indicado e, mais limpo.
