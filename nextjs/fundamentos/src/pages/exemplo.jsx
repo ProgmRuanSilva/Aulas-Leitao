@@ -1,11 +1,12 @@
 import Cabecalho from "../components/Cabecalho";
+import Layout from '../components/Layout'
 
 export default function Exemplo() {
     return(
-        <div>
+        <Layout titulo="Exemplo de Css modularizado">
             <Cabecalho titulo="Ruan é demais"/>
             <Cabecalho titulo="Ruan é incrivel"/>
-        </div>
+        </Layout>
     )
 }
 // se quiser colocar dois modulos envolva com div
