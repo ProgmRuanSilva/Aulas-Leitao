@@ -11,6 +11,10 @@
     background-color: #777;   
 }
 
+.cabecalho h1 {
+    margin: 0;
+}
+
 .cabecalho a {
     background-color: red;
     padding: 5px 12px;
