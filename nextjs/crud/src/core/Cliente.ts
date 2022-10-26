@@ -10,7 +10,6 @@ export default class Cliente {
     }
 
     static vazio() {
-        
         return new Cliente('', 0)
     }
 

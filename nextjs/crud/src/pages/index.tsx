@@ -19,7 +19,7 @@ export default function Home() {
       text-white
     `}>
       <Layout titulo="Cadastro Simples">
-        <Tabela></Tabela>
+        <Tabela clientes={clientes}/>
       </Layout>
     </div>
   )
