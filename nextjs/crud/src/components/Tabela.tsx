@@ -28,7 +28,7 @@ export default function Tabela(props: TabelaProps) {
         return props.clientes?.map((cliente, i) => {
             return (
                 <tr key={cliente.id}
-                    className={`${1 % 2 === 0 ? 'bg-purple-200' : 'bg-purple-100'}`}>
+                    className={`${i % 2 === 0 ? 'bg-purple-200' : 'bg-purple-100'}`}>
                     <td className='text-left p-4'>{cliente.id}</td>
                     <td className='text-left p-4'>{cliente.nome}</td>
                     <td className='text-left p-4'>{cliente.idade}</td>
