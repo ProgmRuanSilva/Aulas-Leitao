@@ -6,7 +6,7 @@ import Botao from "./Botao";
 interface FormularioProps {
     cliente: Cliente
     cancelado?: () => void
-    clienteMudou?: () => void
+    clienteMudou?: (cliente: Cliente) => void 
 }
 
 export default function Formulario(props: FormularioProps) {
