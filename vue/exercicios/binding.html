@@ -8,8 +8,32 @@
 </head>
 <body class="exercicio">
 
+    <div id="app">
+        <p>{{ link }}</p>
+        <p><a href="{{ link }}">Canal</a></p>
+        <p><a v-bind:href="link">Canal 1</a></p>
+        <p><a :href="link"></a>Canal</p> <!-- forma reduzida de bind-->
+        <p>
+            <input type="text" v-model:value="nome"><br> <!--atualiza todos os elemetos atrelados-->
+            <span>{{ nome }}</span>
+        </p>
+    </div>
     <script>
-        // ...
+
+        //binding é importante no vue
+        new Vue({
+            el: "#app",
+            data: {
+                nome: 'Maria',
+                link: "https://youtube.com/cod3rcursos" //ele não interpola sozinho
+            }, //ao usar v-bind vc interpola o atributo
+            watch: {
+                nome(novoValor) {
+                    console.log(novoValor.toUpperCase()) //sempre que chamada ele aciona a func
+                }
+            }
+        })
+
     </script>
 </body>
 </html>
