@@ -8,11 +8,37 @@
     <link rel="stylesheet" href="css/style.css">
     <title>Gerador de QRCode</title>
 </head>
+    <div id="app">
+        <h1>{{title}}</h1>
+    <div>
+        <input type="text" size="25" placeholder="Digite para gerar..."
+        v-model="text">
+    </div>
 
+        <div v-if="text" class="output">
+            <img :src="newQRCode" alt="QRCode">
+        </div>
+    </div>
+    
 <body>
 
     <script>
-        // ...
+        
+        new Vue({
+            el: '#app',
+            data: {
+                title: 'Gerador QRCode',
+                text: 'https://www.cod3r.com.br',
+                qrcode: new QRious({ size: 300 })
+            },
+            computed: {
+                newQRCode() {
+                    this.qrcode.value = this.text
+                    return this.qrcode.toDataURL()
+                }
+            }
+        })
+
     </script>
 </body>
 
