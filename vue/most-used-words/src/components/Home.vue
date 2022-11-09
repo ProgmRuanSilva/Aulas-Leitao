@@ -1,17 +1,17 @@
 <template>
     <v-container fluid>
         <div class="pills">
-            <Pill-Item v-for="word in groupedWords" :key="word.name"
-              name="teste" amount="10"/>
+            <Pill v-for="word in groupedWords" :key="word.name"
+              :name="word.name" :amount="word.amount"/>
         </div>
     </v-container>
 </template>
 
 <script>
-import PillItem from './PillItem';
+import Pill from './Pill';
 
 export default {
-    components: {PillItem},
+    components: { Pill },
     data: function() {
         return {
             groupedWords: [
