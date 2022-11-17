@@ -1,19 +1,24 @@
 {
-    "products": [
-        {
-            "id": 1,
-            "name": "Caneta Bic",
-            "price": 5.80
-        },
-        {
-            "id": 2,
-            "name": "MacBook",
-            "price": 12.99
-        },
-        {
-            "id": 3,
-            "name": "Sansung Apple",
-            "price": 5800.00
-        }
-    ]
+  "products": [
+    {
+      "id": 1,
+      "name": "Caneta Bic",
+      "price": 5.8
+    },
+    {
+      "id": 2,
+      "name": "MacBook",
+      "price": 12.99
+    },
+    {
+      "id": 3,
+      "name": "Sansung Apple",
+      "price": 5800
+    },
+    {
+      "name": "Produto Teste",
+      "price": 124.98,
+      "id": 4
+    }
+  ]
 }
