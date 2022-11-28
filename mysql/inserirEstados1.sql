@@ -1,4 +1,3 @@
--- sql é insensitivo vc pode colocar tanto maiusculo quanto minusculo
 INSERT INTO estados
     (nome, sigla, regiao, populacao)
 values
