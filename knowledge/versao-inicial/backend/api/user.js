@@ -1,7 +1,7 @@
 const bcrypt = require('bcrypt-nodejs')
 
 module.exports = app => {
-    const { existsOrError, notExistsOrError, equalOrError } = app.api.validation
+    const { existsOrError, notExistsOrError, equalsOrError } = app.api.validation
 
     const encryptPassword = password => {
         const salt = bcrypt.genSaltSync(10)
@@ -24,17 +24,17 @@ module.exports = app => {
             if (!user.id) {
                 notExistsOrError(userFromDB, 'Usuário já cadastrado')
             }
-        } catch(msg) {
+        } catch (msg) {
             return res.status(400).send(msg)
         }
 
         user.password = encryptPassword(user.password)
         delete user.confirmPassword
 
-        if(user.id) {
+        if (user.id) {
             app.db('users')
                 .update(user)
-                .where({id: user.id})
+                .where({ id: user.id })
                 .whereNull('deletedAt')
                 .then(_ => res.status(204).send())
                 .catch(err => res.status(500).send(err))
@@ -49,9 +49,20 @@ module.exports = app => {
     const get = (req, res) => {
         app.db('users')
             .select('id', 'name', 'email', 'admin')
+            .whereNull('deletedAt')
             .then(users => res.json(users)) //for attributes users in table.
             .catch(err => res.status(500).send(err))
     }
 
-    return { save }
+    const getbyId = (req, res) => {
+        app.db('users')
+            .select('id', 'name', 'email', 'admin')
+            .where({ id: req.params.id })
+            .whereNull('deletedAt')
+            .first()
+            .then(users => res.json(users))
+            .catch(err => res.status(500).send(err))
+    }
+
+    return { save, get, getbyId }
 }
