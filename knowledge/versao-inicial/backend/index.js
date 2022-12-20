@@ -7,6 +7,7 @@ app.db = db
 
 //consing for manutation of dependencies.
 consign()
+    .include('./config/passport.js')
     .then('./config/middlewares.js')
     .then('./api/validation.js')
     .then('./api')
