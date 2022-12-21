@@ -1,9 +1,13 @@
 const app = require('express')()
 const consign = require('consign')
 const db = require('./config/db')
+const mongoose = require('mongoose')
+
+require('./config/mongodb')
 
 //config knex
 app.db = db
+app.mongoose = mongoose
 
 //consing for manutation of dependencies.
 consign()
